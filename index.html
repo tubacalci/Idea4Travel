@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Smart Meal Selection</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+    <style>
+        body, html {
+            height: 100%;
+            font-family: "Arial", sans-serif;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .bgimg {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url("./thy1.png");
+            min-height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+        <div class="w3-display-middle w3-center">
+            <p>
+                <a href="#menu" class="w3-button w3-xxlarge w3-black" style="margin-top: 500px; margin-left: 50px;">
+                    SMART MEAL
+                </a>
+            </p>
+        </div>
+    </header>
+
+    <div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+        <div class="w3-content">
+            <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">MEAL SELECTION</h1>
+            <p class="w3-center w3-large">Choose your in-flight meal or let AI select the best option for you.</p>
+
+            <div class="w3-row w3-center w3-border w3-border-dark-grey">
+                <a href="javascript:void(0)" onclick="openMenu(event, 'Standard');" id="myLink">
+                    <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Standard Meals</div>
+                </a>
+                <a href="javascript:void(0)" onclick="openMenu(event, 'Dietary');">
+                    <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Dietary Preferences</div>
+                </a>
+                <a href="javascript:void(0)" onclick="openMenu(event, 'AISelection');">
+                    <div class="w3-col s4 tablink w3-padding-large w3-hover-red">AI-Optimized Choice</div>
+                </a>
+            </div>
+
+            <div id="Standard" class="w3-container menu w3-padding-32 w3-white">
+                <h1><b>Chicken & Rice</b></h1>
+                <p class="w3-text-grey">Grilled chicken served with steamed rice and vegetables.</p>
+                <hr>
+
+                <h1><b>Pasta Primavera</b></h1>
+                <p class="w3-text-grey">Freshly made pasta with a selection of seasonal vegetables.</p>
+                <hr>
+
+                <h1><b>Turkish Kebab</b></h1>
+                <p class="w3-text-grey">Authentic Turkish lamb kebab served with pita and yogurt sauce.</p>
+                <hr>
+
+                <h1><b>Vegetable Stir-Fry</b></h1>
+                <p class="w3-text-grey">A delicious mix of stir-fried vegetables in a light soy sauce.</p>
+            </div>
+
+            <div id="Dietary" class="w3-container menu w3-padding-32 w3-white">
+                <h1><b>Gluten-Free Meal</b></h1>
+                <p class="w3-text-grey">A nutritious meal prepared without gluten-containing ingredients.</p>
+                <hr>
+
+                <h1><b>Vegetarian Delight</b></h1>
+                <p class="w3-text-grey">A fully plant-based meal with high nutritional value.</p>
+                <hr>
+
+                <h1><b>Halal Meal</b></h1>
+                <p class="w3-text-grey">Prepared according to Halal dietary guidelines.</p>
+                <hr>
+
+                <h1><b>Kosher Meal</b></h1>
+                <p class="w3-text-grey">Prepared following Kosher dietary laws.</p>
+            </div>
+
+            <div id="AISelection" class="w3-container menu w3-padding-32 w3-white">
+                <h1 class="w3-center"><b>Let AI Choose Your Best Meal</b></h1>
+                <p class="w3-text-grey w3-center">
+                    Based on your previous choices, diet preferences, and flight details, AI will optimize your meal selection.
+                </p>
+                <p class="w3-center w3-text-red">
+                    <strong>Note:</strong> AI-selected meals can be changed up to 24 hours before departure.
+                </p>
+                <hr>
+
+                <button class="w3-button w3-block w3-green w3-padding-large">
+                    Enable AI Meal Selection
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openMenu(evt, menuName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("menu");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+            }
+            document.getElementById(menuName).style.display = "block";
+            evt.currentTarget.firstElementChild.className += " w3-red";
+        }
+        document.getElementById("myLink").click();
+    </script>
+
+</body>
+</html>
