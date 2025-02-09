@@ -22,14 +22,17 @@
 
 ### **1️⃣ Ticket System - Meal Pre-Selection During Booking**  
 Passengers can choose their meals during ticket booking, ensuring **better meal planning and reduced waste**.  
+
 ![Ticket System](images/ticketSystem.png)  
 
 ### **2️⃣ Meal Selection Interface**  
 Users can select from **standard meals, dietary preferences, or AI-optimized choices**.  
+
 ![Meal Selection](images/mealSelection.png)  
 
 ### **3️⃣ AI-Optimized Meal Choice**  
 AI suggests the most suitable meal based on **passenger history, diet, and flight details**.  
+
 ![AI Optimized Choice](images/AIOptimizedChoice.png)  
 
 ---
